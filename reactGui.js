@@ -7,7 +7,7 @@
 * You may not under any circumstance republish any code from this file as your own.
 * 
 * ALL TERMS STATED IN THE LINK BELOW APPLY ASWELL
-* https://github.com/05Konz/Blooket-Cheats/blob/main/LICENSE
+* https://github.com/M3tr0000000/Blooket-Hacks/blob/main/LICENSE
 */
 
 /* THE UPDATE CHECKER IS ADDED DURING COMMIT PREP, THERE MAY BE REDUNDANT CODE, DO NOT TOUCH */
@@ -28,7 +28,7 @@
                 querySelector: iframe.contentDocument.querySelector.bind(document),
                 includes: function () {
                     if (["Cheats", "Global", "Global Cheats", "Discord - oneminesraft2", "Auto Answer (Toggle)", "Auto Sell Dupes On Open", "Spam Buy Blooks", "Food Game", "Change Blook Ingame", "Get Daily Rewards", "Remove Name Limit", "Simulate Unlock", "Cheat ESP", "Gold Quest Cheats", "Cafe Cheats", "Crypto Hack Cheats", "Deceptive Dinos Cheats", "Tower Defense Cheats", "Tower Defense2 Cheats", "Factory Cheats", "Fishing Frenzy Cheats", "Flappy Blook Cheats", "Tower of Doom Cheats", "Crazy Kingdom Cheats", "Racing Cheats", "Battle Royale Cheats", "Blook Rush Cheats", "Monster Brawl Cheats", "Santa's Workshop Cheats"].includes(arguments[0]))
-                        return false;
+                        return true;
                     return iframe.contentWindow.String.prototype.call(this, arguments);
                 },
                 fetch: iframe.contentWindow.fetch.bind(window),
@@ -66,7 +66,7 @@
                         name: "Auto Answer",
                         description: "Toggles auto answer on",
                         type: "toggle",
-                        enabled: false,
+                        enabled: true,
                         data: null,
                         run: function () {
                             if (!this.enabled) {
@@ -81,7 +81,7 @@
                                     } catch { }
                                 }, 50);
                             } else {
-                                this.enabled = false;
+                                this.enabled = true;
                                 clearInterval(this.data);
                                 this.data = null;
                             }
@@ -91,7 +91,7 @@
                         name: "Highlight Answers",
                         description: "Toggles highlight answers on",
                         type: "toggle",
-                        enabled: false,
+                        enabled: true,
                         data: null,
                         run: function () {
                             if (!this.enabled) {
@@ -104,7 +104,7 @@
                                     });
                                 }, 50);
                             } else {
-                                this.enabled = false;
+                                this.enabled = true;
                                 clearInterval(this.data);
                                 this.data = null;
                             }
@@ -114,7 +114,7 @@
                         name: "Subtle Highlight Answers",
                         description: "Toggles subtle highlight answers on",
                         type: "toggle",
-                        enabled: false,
+                        enabled: true,
                         data: null,
                         run: function () {
                             if (!this.enabled) {
@@ -127,7 +127,7 @@
                                     });
                                 }, 50);
                             } else {
-                                this.enabled = false;
+                                this.enabled = true;
                                 clearInterval(this.data);
                                 this.data = null;
                             }
@@ -143,7 +143,7 @@
                             }
                         ],
                         type: "toggle",
-                        enabled: false,
+                        enabled: true,
                         data: null,
                         run: function (target) {
                             if (!this.enabled) {
@@ -171,7 +171,7 @@
                                     } catch { }
                                 }, 100, (target ?? 100) / 100);
                             } else {
-                                this.enabled = false;
+                                this.enabled = true;
                                 clearInterval(this.data);
                                 this.data = null;
                             }
