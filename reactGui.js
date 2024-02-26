@@ -66,7 +66,7 @@
                         name: "Auto Answer",
                         description: "Toggles auto answer on",
                         type: "toggle",
-                        enabled: true,
+                        enabled: false,
                         data: null,
                         run: function () {
                             if (!this.enabled) {
@@ -81,7 +81,7 @@
                                     } catch { }
                                 }, 50);
                             } else {
-                                this.enabled = true;
+                                this.enabled = false;
                                 clearInterval(this.data);
                                 this.data = null;
                             }
@@ -91,11 +91,11 @@
                         name: "Highlight Answers",
                         description: "Toggles highlight answers on",
                         type: "toggle",
-                        enabled: true,
+                        enabled: false,
                         data: null,
                         run: function () {
                             if (!this.enabled) {
-                                this.enabled = true;
+                                this.enabled = false;
                                 this.data = setInterval(() => {
                                     const { stateNode: { state, props } } = Object.values((function react(r = document.querySelector("body>div")) { return Object.values(r)[1]?.children?.[0]?._owner.stateNode ? r : react(r.querySelector(":scope>div")) })())[1].children[0]._owner;
                                     [...document.querySelectorAll(`[class*="answerContainer"]`)].forEach((answer, i) => {
@@ -104,7 +104,7 @@
                                     });
                                 }, 50);
                             } else {
-                                this.enabled = true;
+                                this.enabled = false;
                                 clearInterval(this.data);
                                 this.data = null;
                             }
@@ -114,7 +114,7 @@
                         name: "Subtle Highlight Answers",
                         description: "Toggles subtle highlight answers on",
                         type: "toggle",
-                        enabled: true,
+                        enabled: false,
                         data: null,
                         run: function () {
                             if (!this.enabled) {
@@ -127,7 +127,7 @@
                                     });
                                 }, 50);
                             } else {
-                                this.enabled = true;
+                                this.enabled = false;
                                 clearInterval(this.data);
                                 this.data = null;
                             }
@@ -143,7 +143,7 @@
                             }
                         ],
                         type: "toggle",
-                        enabled: true,
+                        enabled: false,
                         data: null,
                         run: function (target) {
                             if (!this.enabled) {
@@ -171,7 +171,7 @@
                                     } catch { }
                                 }, 100, (target ?? 100) / 100);
                             } else {
-                                this.enabled = true;
+                                this.enabled = false;
                                 clearInterval(this.data);
                                 this.data = null;
                             }
